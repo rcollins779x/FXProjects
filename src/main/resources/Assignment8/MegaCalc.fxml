@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane id="grid" alignment="CENTER" hgap="2.0" maxHeight="700.0" maxWidth="400.0" minHeight="400.0" minWidth="300.0"
+          prefHeight="400.0" prefWidth="300.0" vgap="2.0" xmlns="http://javafx.com/javafx/11.0.1"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assignment8.Controller">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER"/>
+        <ColumnConstraints halignment="CENTER"/>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308"/>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308"/>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308"/>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints valignment="CENTER"/>
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0"/>
+        <RowConstraints/>
+        <RowConstraints percentHeight="20.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0"/>
+    </rowConstraints>
+    <padding>
+        <Insets bottom="1.0"/>
+    </padding>
+    <Label fx:id="total" alignment="CENTER" maxHeight="100.0" maxWidth="370.0" prefHeight="100.0" prefWidth="370.0"
+           text="0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="1">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Label fx:id="formula" alignment="CENTER" maxHeight="100.0" maxWidth="370.0" prefHeight="100.0" prefWidth="370.0"
+           GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="3">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="300.0" mnemonicParsing="false"
+            onAction="#onActionButtonClear" prefHeight="100.0" prefWidth="300.0" text="Clear" GridPane.columnIndex="2"
+            GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4"
+            GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButtonDivide" prefHeight="100.0" prefWidth="100.0" text="/" GridPane.columnIndex="5"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton7" prefHeight="100.0" prefWidth="100.0" text="7" GridPane.columnIndex="2"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton8" prefHeight="100.0" prefWidth="100.0" text="8" GridPane.columnIndex="3"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton9" prefHeight="100.0" prefWidth="100.0" text="9" GridPane.columnIndex="4"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButtonMultiply" prefHeight="100.0" prefWidth="100.0" text="x" GridPane.columnIndex="5"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton4" prefHeight="100.0" prefWidth="100.0" text="4" GridPane.columnIndex="2"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton5" prefHeight="100.0" prefWidth="100.0" text="5" GridPane.columnIndex="3"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton6" prefHeight="100.0" prefWidth="100.0" text="6" GridPane.columnIndex="4"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButtonSubtract" prefHeight="100.0" prefWidth="100.0" text="-" GridPane.columnIndex="5"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton1" prefHeight="100.0" prefWidth="100.0" text="1" GridPane.columnIndex="2"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton2" prefHeight="100.0" prefWidth="100.0" text="2" GridPane.columnIndex="3"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton3" prefHeight="100.0" prefWidth="100.0" text="3" GridPane.columnIndex="4"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButtonAdd" prefHeight="100.0" prefWidth="100.0" text="+" GridPane.columnIndex="5"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="negative" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0"
+            mnemonicParsing="false" onAction="#onActionSignal" prefHeight="100.0" prefWidth="100.0" text="+/-"
+            GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8"
+            GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButton0" prefHeight="100.0" prefWidth="100.0" text="0" GridPane.columnIndex="3"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButtonDot" prefHeight="100.0" prefWidth="100.0" text="." GridPane.columnIndex="4"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false"
+            onAction="#onActionButtonEqual" prefHeight="100.0" prefWidth="100.0" text="=" GridPane.columnIndex="5"
+            GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER"
+            GridPane.vgrow="ALWAYS">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+</GridPane>
