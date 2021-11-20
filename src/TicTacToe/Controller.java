@@ -3,8 +3,6 @@
 //Student	Ronnin Collins
 package TicTacToe;
 
-import javafx.beans.DefaultProperty;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -15,6 +13,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+    public Button reset,nw,n,ne,w,c,e,sw,s,se;
     @FXML private Label topText;
     private int playerTurn = 0;
     @FXML ArrayList<Button> buttons; //buttons are added from the fxml fx:define function
