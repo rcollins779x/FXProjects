@@ -12,8 +12,8 @@
                 <Insets bottom="5.0" />
             </padding>
             <Menu mnemonicParsing="false" text="File">
-               <MenuItem fx:id="NewGame" mnemonicParsing="false" onAction="#NewGame" text="New Game" />
-                <MenuItem mnemonicParsing="false" text="Run A*" />
+               <MenuItem mnemonicParsing="false" onAction="#NewGame" text="New Game" />
+                <MenuItem mnemonicParsing="false" onAction="#Astar" text="Run A*" />
                 <MenuItem mnemonicParsing="false" text="Close" />
             </Menu>
         </MenuBar>
