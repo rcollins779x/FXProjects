@@ -8,6 +8,7 @@ module com.example.fxprojects {
     requires validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires lombok;
 
     opens Assignment8 to javafx.fxml;
     exports Assignment8;
@@ -17,5 +18,8 @@ module com.example.fxprojects {
     exports Lab8;
     opens TicTacToe to javafx.fxml;
     exports TicTacToe;
+    opens RestaurantFX to javafx.fxml;
+    exports RestaurantFX;
+
 
 }

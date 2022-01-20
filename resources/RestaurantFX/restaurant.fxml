@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.util.ArrayList?>
+
+<GridPane id="grid" alignment="CENTER" hgap="2.0" vgap="2.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="RestaurantFX.Controller4TTT">
+    <padding>
+        <Insets bottom="2.0"/>
+    </padding>
+    <Label fx:id="topText" alignment="CENTER" maxHeight="100.0" maxWidth="370.0" text="Tic-Tac-Toe" GridPane.columnIndex="2"
+           GridPane.columnSpan="4" GridPane.rowIndex="1">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Button fx:id="sw" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="s" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="se" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="w" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="c" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="e" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="nw" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="n" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="ne" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="reset" contentDisplay="CENTER" onAction="#restartGame" prefHeight="100.0" prefWidth="100.0" text="Reset"
+            GridPane.columnIndex="3" GridPane.rowIndex="3">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <fx:define>
+        <ArrayList fx:id="buttons">
+            <fx:reference source="nw"/>
+            <fx:reference source="n"/>
+            <fx:reference source="ne"/>
+            <fx:reference source="w"/>
+            <fx:reference source="c"/>
+            <fx:reference source="e"/>
+            <fx:reference source="sw"/>
+            <fx:reference source="s"/>
+            <fx:reference source="se"/>
+        </ArrayList>
+    </fx:define>
+</GridPane>
