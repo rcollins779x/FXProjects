@@ -2,3 +2,4 @@ NewUser(first=Rennan, last=Collins, password=123, userID=rcollins0, jobTitle=1, 
 NewUser(first=a, last=b, password=0, userID=ab1, jobTitle=2, id=1)
 NewUser(first=c, last=d, password=e, userID=cd2, jobTitle=3, id=2)
 NewUser(first=James, last=Brown, password=0000, userID=jbrown3, jobTitle=3, id=3)
+NewUser(first=James, last=Bob, password=123, userID=jbob4, jobTitle=1, id=4)

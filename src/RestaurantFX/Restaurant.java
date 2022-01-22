@@ -21,7 +21,7 @@ public class Restaurant extends javafx.application.Application {
         new HomePage();
         getString();
         new MenuPage();
-        //new LoginPage();
+        new LoginPage();
     }
 
     @Override

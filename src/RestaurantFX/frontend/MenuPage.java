@@ -1,10 +1,10 @@
 package RestaurantFX.frontend;
 
 import RestaurantFX.backend.Appetizer;
-import RestaurantFX.backend.NewUser;
+import RestaurantFX.backend.Controller;
+
 import java.util.ArrayList;
 
 public class MenuPage {
-    public static ArrayList<Appetizer> appetizers = new ArrayList<>();
-
+    //Controller.LoadAppetizers();
 }
