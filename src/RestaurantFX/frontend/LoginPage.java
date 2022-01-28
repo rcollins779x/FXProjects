@@ -1,15 +1,18 @@
 package RestaurantFX.frontend;
 
 import static RestaurantFX.backend.Controller.*;
+
 import RestaurantFX.backend.NewUser;
+
 import java.util.Locale;
+
 import lombok.Data;
 
 @Data
 public class LoginPage {
     public LoginPage() {
 
-        for(int choice = -1;choice != 0;) {
+        for (int choice = -1; choice != 0; ) {
             System.out.println("0. Exit");
             System.out.println("1. Create new user");
             System.out.println("2. Login");
@@ -27,14 +30,14 @@ public class LoginPage {
     }
 
     public void LoginPrompt() {
+        System.out.println("What is your position?\n1. Manager\n2. Wait Staff\n3. Cook\n4. Busboy\n5. Hostess\n6. Bartender");
+        int title = getInt();
+
         System.out.print("Enter user name: ");
         String user = getString();
 
         System.out.print("Enter password: ");
         String password = getString();
-
-        System.out.println("What is your position?\n1. Manager\n2. Wait Staff\n3. Cook\n4. Busboy\n5. Hostess\n6. Bartender");
-        int title = getInt();
 
         boolean access = checkCredentials(user, password, title);
         System.out.println(access ? "Success!" : "Denied!");
@@ -74,12 +77,12 @@ public class LoginPage {
         System.out.println("Enter your username:");
         String userID = getString();
 
-        if(settings.size() == 0) System.out.println("Settings is empty. Please let your manager know.");
+        if (settings.size() == 0) System.out.println("Settings is empty. Please let your manager know.");
         for (NewUser user : settings) {
             if (user.getUserID().equals(userID)) {
                 System.out.println("1. Retrieve current password.\n2. Enter new password.");
 
-                switch(getInt()) {
+                switch (getInt()) {
                     case 1 -> System.out.println("Current password: " + user.getPassword());
                     case 2 -> {
                         System.out.print("Enter password (no restrictions): ");

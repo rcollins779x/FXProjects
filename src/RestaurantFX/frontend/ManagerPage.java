@@ -1,5 +1,7 @@
 package RestaurantFX.frontend;
 
+import RestaurantFX.MenuPage;
+
 import static RestaurantFX.backend.Controller.getInt;
 
 public class ManagerPage {

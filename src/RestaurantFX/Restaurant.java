@@ -1,27 +1,29 @@
-//Class		CSE1322L
-//Teacher	Peter Adeojo
-//Student	Ronnin Collins
 package RestaurantFX;
 
 import RestaurantFX.backend.Controller;
-import RestaurantFX.frontend.HomePage;
 import RestaurantFX.frontend.LoginPage;
-import RestaurantFX.frontend.MenuPage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import static RestaurantFX.backend.Controller.getString;
+import static RestaurantFX.backend.Controller.*;
 
 public class Restaurant extends javafx.application.Application {
 
     public static void main(String[] args) {
         launch();
-        Controller.LoadSettings();
-        new HomePage();
-        getString();
-        new MenuPage();
-        new LoginPage();
+        LoadSettings();
+        LoadHomePage();
+        System.out.println("0. Exit\n1. Menu\n2. Login");
+        int choice = getInt();
+        switch (choice) {
+            case 1 -> {
+                LoadAppetizers();
+                LoadBeverages();
+                LoadSalads();
+            }
+            case 2 -> LoadLoginPage();
+        }
     }
 
     @Override

@@ -1,9 +1,13 @@
 package RestaurantFX.frontend;
 
-import static RestaurantFX.backend.Controller.getString;
-
 public class HomePage {
+    int choice;
+
     public HomePage() {
+        SplashScreen();
+    }
+
+    private void SplashScreen() {
         System.out.println("░░░░░██╗██╗░██████╗░░░░░░░░░█████╗░░█████╗░██████╗░███╗░░██╗███████╗██████╗░");
         System.out.println("░░░░░██║╚█║██╔════╝░░░░░░░░██╔══██╗██╔══██╗██╔══██╗████╗░██║██╔════╝██╔══██╗");
         System.out.println("░░░░░██║░╚╝╚█████╗░░░░░░░░░██║░░╚═╝██║░░██║██████╔╝██╔██╗██║█████╗░░██████╔╝");
