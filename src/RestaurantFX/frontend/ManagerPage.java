@@ -2,7 +2,7 @@ package RestaurantFX.frontend;
 
 import RestaurantFX.MenuPage;
 
-import static RestaurantFX.backend.Controller.getInt;
+import static RestaurantFX.backend.LoadController.getInt;
 
 public class ManagerPage {
     ManagerPage() {

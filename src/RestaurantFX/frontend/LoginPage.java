@@ -1,6 +1,6 @@
 package RestaurantFX.frontend;
 
-import static RestaurantFX.backend.Controller.*;
+import static RestaurantFX.backend.LoadController.*;
 
 import RestaurantFX.backend.NewUser;
 
@@ -69,7 +69,7 @@ public class LoginPage {
         System.out.println("Your username is " + user.getUserID());
 
         settings.add(user);
-        UpdateSettings(user);
+        UpdateSettings();
     }
 
     private void ForgotPassword() {
@@ -87,7 +87,7 @@ public class LoginPage {
                     case 2 -> {
                         System.out.print("Enter password (no restrictions): ");
                         user.setPassword(getString());
-                        UpdateSettings(user);
+                        UpdateSettings();
                     }
                 }
                 return;

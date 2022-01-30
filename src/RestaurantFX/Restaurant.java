@@ -1,12 +1,10 @@
 package RestaurantFX;
 
-import RestaurantFX.backend.Controller;
-import RestaurantFX.frontend.LoginPage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import static RestaurantFX.backend.Controller.*;
+import static RestaurantFX.backend.LoadController.*;
 
 public class Restaurant extends javafx.application.Application {
 
@@ -17,11 +15,7 @@ public class Restaurant extends javafx.application.Application {
         System.out.println("0. Exit\n1. Menu\n2. Login");
         int choice = getInt();
         switch (choice) {
-            case 1 -> {
-                LoadAppetizers();
-                LoadBeverages();
-                LoadSalads();
-            }
+            case 1 -> LoadMenu();
             case 2 -> LoadLoginPage();
         }
     }

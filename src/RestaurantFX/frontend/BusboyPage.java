@@ -1,6 +1,6 @@
 package RestaurantFX.frontend;
 
-import static RestaurantFX.backend.Controller.underMaintenance;
+import static RestaurantFX.backend.LoadController.underMaintenance;
 
 public class BusboyPage {
     BusboyPage() {

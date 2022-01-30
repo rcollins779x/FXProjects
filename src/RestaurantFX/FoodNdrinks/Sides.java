@@ -1,4 +1,4 @@
-package RestaurantFX.backend;
+package RestaurantFX.FoodNdrinks;
 
 import lombok.Data;
 
@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 @Data
-public class Appetizer {
+public class Sides {
     ArrayList<String> opt = new ArrayList<>();
     String name, description;
     int type = 0;
     double price = 0;
 
-    Appetizer(String[] line) {
+    public Sides(String[] line) {
         for (int i = 0; i < line.length; i++)
             switch (i) {
                 case 0 -> name = line[i];

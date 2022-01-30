@@ -1,7 +1,6 @@
 package RestaurantFX.frontend;
 
 public class HomePage {
-    int choice;
 
     public HomePage() {
         SplashScreen();
