@@ -20,6 +20,9 @@ module com.example.fxprojects {
     exports TicTacToe;
     opens RestaurantFX to javafx.fxml;
     exports RestaurantFX;
+    exports RestaurantFX.backend;
+    exports RestaurantFX.FoodNdrinks;
+    opens RestaurantFX.backend to javafx.fxml;
 
 
 }

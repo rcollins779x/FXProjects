@@ -1,27 +1,40 @@
 package RestaurantFX;
 
+import RestaurantFX.frontend.HomePage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import static RestaurantFX.backend.LoadController.*;
+import java.util.Scanner;
+
+import static RestaurantFX.backend.CartController.*;
+import static RestaurantFX.backend.MenuController.*;
+import static RestaurantFX.backend.LoginController.*;
 
 public class Restaurant extends javafx.application.Application {
 
     public static void main(String[] args) {
         launch();
         LoadSettings();
-        LoadHomePage();
-        System.out.println("0. Exit\n1. Menu\n2. Login");
-        int choice = getInt();
-        switch (choice) {
-            case 1 -> LoadMenu();
-            case 2 -> LoadLoginPage();
+        LoadCart();
+        LoadMenu();
+        new HomePage();
+
+        for (int choice = -1; choice != 0; ) {
+            System.out.println("0. Exit\n1. Menu\n2. Login\n3. Place an Order\n4. View Cart\n5. Vew Order");
+
+            switch (choice = getInt()) {
+                case 1 -> DisplayMenu();
+                case 2 -> LoadLoginPage();
+                case 3 -> OrderEntryPage();
+                case 4 -> DisplayCart();
+                case 5 -> DisplayOrder();
+            }
         }
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("restaurant.fxml"));
         //loader.setController(new Controller());
         Scene scene = new Scene(loader.load());
@@ -34,5 +47,15 @@ public class Restaurant extends javafx.application.Application {
         primaryStage.setMaxHeight(400);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    public static String getString() {
+        Scanner scan = new Scanner(System.in);
+        return scan.next();
+    }
+
+    public static int getInt() {
+        Scanner scan = new Scanner(System.in);
+        return scan.nextInt();
     }
 }

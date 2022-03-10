@@ -1,6 +1,8 @@
 package RestaurantFX.frontend;
 
-import static RestaurantFX.backend.LoadController.*;
+import static RestaurantFX.Restaurant.getInt;
+import static RestaurantFX.Restaurant.getString;
+import static RestaurantFX.backend.LoginController.*;
 
 import RestaurantFX.backend.NewUser;
 
@@ -66,10 +68,10 @@ public class LoginPage {
         user.setPassword(getString());
         user.setId(settings.size());
         user.setUserID((user.getFirst().charAt(0) + user.getLast() + user.getId()).toLowerCase(Locale.ROOT));
-        System.out.println("Your username is " + user.getUserID());
 
         settings.add(user);
-        UpdateSettings();
+        if(UpdateSettings())
+            System.out.println("Your username is " + user.getUserID());
     }
 
     private void ForgotPassword() {
